@@ -1,0 +1,194 @@
+@import './helpers.css';
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notation-input, .header-input {
+    width: 410px;
+    padding: 5px;
+    margin-bottom :5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.space {
+	width: 20px;
+	position: relative;
+}
+
+/* .chart{
+    width: 410px;
+    min-height: 105px;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+} */
+
+.chart4 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, auto));
+    gap: 1px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+
+.chart3 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, auto));
+    gap: 1px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.bar4 {
+    border: 2px solid black;
+	margin-bottom: 30px;
+    position: relative;
+}
+
+.bar4:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 50%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    left: 25%;
+    z-index: -1;
+}
+
+.bar4:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 0;
+    z-index: -1;
+}
+
+
+
+.bar3 {
+    border: 2px solid black;
+    position: relative;
+}
+
+.bar3:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 33%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    left: 33%;
+    z-index: -1;
+}
+
+
+
+
+.note-wrapper {
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+/* ---NOTE LENGTH WIDTH--- */
+
+.whole {
+    width: 400px;
+    height: 100px;
+}
+
+.half {
+    width: 200px;
+    height: 100px;
+}
+
+.quarter {
+    width: 100px;
+    height: 100px;
+}
+
+.eighth {
+    width: 50px;
+    height: 100px;
+}
+
+.sixteenth {
+    width: 25px;
+    height: 100px;
+}
+
+/* ---OCTAVE COLOR--- */
+
+.red {
+    fill: red;
+}
+
+.brown {
+    fill: rgb(124, 65, 65);
+}
+
+.grey {
+    fill: grey;
+}
+
+.blue {
+    fill: blue;
+}
+
+.black {
+    fill: black;
+}
+
+.yellow {
+    fill: yellow;
+}
+
+.green {
+    fill: green;
+}
+
+.boom-orange {
+    fill: #fc9a02
+}
+
+.boom-green {
+    fill: #01ff00
+}
+
+.boom-purple {
+    fill: #9b00ff
+}
+
+.boom-pink {
+    fill: #ff00fe
+}
+
+/*--- Media Q for Print ---*/
+
+@media print {
+    .notation-input , .header-input , .explanation-section{
+     display: none;
+    }
+ }
