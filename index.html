@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style/main.css">
+  <title>Imagine</title>
+</head>
+
+<body>
+
+  <!-- -->
+  <section class="container">
+
+    <section class="explanation-section">
+		<img src="./img/imagine-colors.jpg" alt="">
+      
+   
+      <div>Format for each figurenot: [shape][color][pitch]</div>
+      <ul>
+        <li><b>Shapes:</b> c = circle, r = rectangle, x = ix, t = triangle, q = quiet
+        <li><b>Colors:</b> r = red, b = brownm y = gray, e = blue, k = black, w = yellow, g = green
+        <li><b>Pitch:</b> 1 = whole, 2 = half, 4 = quarter, 8 = eighth, 6 = sixteenth
+        <li><b>Examples:</b> cr2 cr2 rg4 q8
+      </ul>
+      <br>
+    </section>
+
+    <input class="header-input" placeholder="Enter Title"  type="text" oninput="handleHeaderChange(this)">
+    <input class="notation-input" placeholder="Enter Notes"type="text" id="notes" oninput="handleChange(this)">
+
+    <section class="explanation-section">
+	  <input type="radio" id="4" name="size" value="4" checked onchange="setSize(4)">4 squares
+	  <input type="radio" id="3" name="size" value="3" onchange="setSize(3)">3 squares
+    </section>
+
+
+    <h1 class="header"></h3>
+    <div id="chart"> </div>
+
+
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/svg.js"></script>
+</body>
+
+</html>
