@@ -1,1 +1,1 @@
-# imagine
+# figure notes tool for imagine
