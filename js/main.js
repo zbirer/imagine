@@ -27,13 +27,13 @@ const characterToLengthMap = {
 }
 
 const characterToPitchMap = {
-    "r": 'red',
-    "b": 'brown',
-    "y": 'grey',
-    "e": 'blue',
-    "k": 'black',
-    "w": 'yellow',
-    "g": 'green',
+    "c": 'red',
+    "d": 'brown',
+    "e": 'grey',
+    "f": 'blue',
+    "g": 'black',
+    "a": 'yellow',
+    "b": 'green',
     
 	//--boom walkers additional colors--//
     "o": 'boom-orange',
@@ -72,6 +72,10 @@ function setSize(newSize) {
 	sizeInfo = (newSize == 3) ? sizeInfo3 : sizeInfo4
 	console.log("new size ", sizeInfo)
     createNoteObj(document.getElementById("notes").value)
+}
+
+function setTool(name) {
+	console.log("new tool: ",name)
 }
 
 function handleHeaderChange(ev) {
