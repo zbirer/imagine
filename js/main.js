@@ -26,20 +26,26 @@ const characterToLengthMap = {
     default: 'quarter'
 }
 
-const characterToPitchMap = {
+const figureNotesColors = {
+    "a": 'yellow',
+    "b": 'green',
     "c": 'red',
     "d": 'brown',
     "e": 'grey',
     "f": 'blue',
     "g": 'black',
-    "a": 'yellow',
-    "b": 'green',
-    
-	//--boom walkers additional colors--//
-    "o": 'boom-orange',
-    "n": 'boom-green',
-    "p": 'boom-purple',
-    "i": 'boom-pink',
+
+    default: 'red'
+}
+
+const boomWalkersColors = {
+    "a": 'boom-purple',
+    "b": 'boom-pink',
+    "c": 'red',
+    "d": 'boom-orange',
+    "e": 'yellow',
+    "f": 'boom-lite-green',
+    "g": 'boom-dark-green',
 
     default: 'red'
 }
@@ -67,15 +73,35 @@ let sizeInfo3 = {
 }
 
 let sizeInfo = sizeInfo4
+let colorsMap = figureNotesColors
+
+function hide(elementId) {
+	document.getElementById(elementId).style.display = "none";
+}
+
+function show(elementId) {
+	document.getElementById(elementId).style.display = "inline";
+}
+
+function setTool(tool) {
+	if (tool == "boomwalkers") {
+		colorsMap = boomWalkersColors
+		hide("figureNotesNotes")
+		show("boomWalkersNotes")
+	} else {
+		colorsMap = figureNotesColors
+		show("figureNotesNotes")
+		hide("boomWalkersNotes")
+	}
+
+    createNoteObj(document.getElementById("notes").value)
+	console.log("new tool: "+tool, colorsMap)
+}
 
 function setSize(newSize) {
 	sizeInfo = (newSize == 3) ? sizeInfo3 : sizeInfo4
 	console.log("new size ", sizeInfo)
     createNoteObj(document.getElementById("notes").value)
-}
-
-function setTool(name) {
-	console.log("new tool: ",name)
 }
 
 function handleHeaderChange(ev) {
@@ -107,7 +133,7 @@ function createNoteObj(notesStr) {
 
 			length: characterToLengthMap[length] || characterToLengthMap.default,
 		
-			pitch: characterToPitchMap[pitch] || characterToPitchMap.default
+			pitch: colorsMap[pitch] || colorsMap.default
 		}
 
 

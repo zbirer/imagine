@@ -173,8 +173,12 @@ body {
     fill: #fc9a02
 }
 
-.boom-green {
+.boom-lite-green {
     fill: #01ff00
+}
+
+.boom-dark-green {
+    fill: #196F3D
 }
 
 .boom-purple {

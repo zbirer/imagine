@@ -17,17 +17,19 @@
     <section class="explanation-section">
 		<!-- <img src="./img/imagine-colors.jpg" alt=""> -->
       
+      <h3>Format for each figurenot: [octave][note][duration]</h3>
 
-<!--   
-	<section class="tool-selection">
-	  <input type="radio" name="tool" value="figurenotes" checked onchange="setTool('figurenotes')">Figure Notes
-	  <input type="radio" name="tool" value="boomwalkers" onchange="setTool('boomwalkers')">Boom Walkers
-	</section>
-	-->
-      <div>Format for each figurenot: [octave][note][duration]</div>
+	  <div>
+		<section>
+		  <input type="radio" id="1" name="tool" checked onchange="setTool('figurenotes')">FigureNotes
+		  <input type="radio" id="2" name="tool" onchange="setTool('boomwalkers')">BoomWalkers
+		</section>
+	  </div>
+
       <ul>
         <li><b>Shapes (Octave):</b> c = circle, r = rectangle, x = x, t = triangle, q = quiet
-        <li><b>Colors (Note):</b> a = yellow, b = green, c = red, d = brownm, e = gray, f = blue, g = black 
+        <li id="figureNotesNotes"><b>Colors (Note):</b> a = yellow, b = green, c = red, d = brownm, e = gray, f = blue, g = black 
+        <li id="boomWalkersNotes" style="display: none"><b>Colors (Note):</b> a = purple, b = pink, c  = red, d = orange, e = yellow, f = light green, g = dark green
         <li><b>Duration:</b> 1 = whole, 2 = half, 4 = quarter, 8 = eighth, 6 = sixteenth
         <li><b>Examples:</b> cr2 cr2 rg4 q8
       </ul>
